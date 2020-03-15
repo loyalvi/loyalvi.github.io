@@ -5,17 +5,17 @@
   
 
   
-  <title>Hexo</title>
+  <title>Lovi</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="Lovi">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Lovi">
 <meta property="og:locale" content="en_US">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="Lovi" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -36,7 +36,7 @@
   <div id="header-outer" class="outer">
     <div id="header-title" class="inner">
       <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
+        <a href="/" id="logo">Lovi</a>
       </h1>
       
     </div>
@@ -64,9 +64,46 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-git/git初探-摆脱GUI" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-git-1" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/" class="article-date">
+    <a href="/2020/03/15/git-1/" class="article-date">
+  <time datetime="2020-03-15T13:50:37.000Z" itemprop="datePublished">2020-03-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/15/git-1/">git 1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1232<br><img src="/2020/03/15/git-1/1.jpg" alt="1232121"></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/03/15/git-1/" data-id="ck7t3nsva0003m8tv8j6samhy" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-git/git 2" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/03/12/git/git%202/" class="article-date">
   <time datetime="2020-03-12T06:18:00.000Z" itemprop="datePublished">2020-03-12</time>
 </a>
     
@@ -78,7 +115,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/">git初探(二)-推送已有代码到远程仓库</a>
+      <a class="article-title" href="/2020/03/12/git/git%202/">git初探(二)-推送已有代码到远程仓库</a>
     </h1>
   
 
@@ -89,7 +126,13 @@
         <p>推送已有项目代码到远程仓库。</p>
 <h3 id="1-初始化仓库"><a href="#1-初始化仓库" class="headerlink" title="1.初始化仓库"></a>1.初始化仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//初始化</span><br><span class="line">git init</span><br><span class="line">//</span><br><span class="line">git add .</span><br><span class="line">//添加到 形成快照</span><br><span class="line">git commit -m <span class="string">"init project"</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
 
-<p><code>git push origin master</code></p>
+<p>注：<br>仓库分为工作区 暂存区 提交区。   </p>
+<ul>
+<li>文件夹即是工作区。  </li>
+<li>使用git add 命令添加文件到暂存区（stage）。  </li>
+<li>使用git commit 添加文件到版本库？（commit .git文件夹中的快照信息）。</li>
+<li>git status 可以产看被commit的文件（工作区和暂存区的状态）<br>![](git 2_files/2.jpg)<br>![](git 2_files/1.jpg)<br>![](git 2_files/1.jpg)<br><code>git push origin master</code></li>
+</ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
 <h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h3><p>在github（gitee/gitlab）上创建新项目，并且拿到对应的空项目的https（http）/ssh路径。  </p>
 <p>例如我创建了<code>git@github.com:loyalvi/hexo.git</code>这个项目。</p>
@@ -99,7 +142,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/" data-id="ck7t14o350009actv8fxg4mbi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/12/git/git%202/" data-id="ck7t3nswm000am8tveolc0b57" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
@@ -184,7 +227,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/12/MD-TODO-List/" data-id="ck7t14o1h0000actvclp0b49b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/12/MD-TODO-List/" data-id="ck7t3nsur0000m8tv4agrhtqa" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/" rel="tag">Markdown</a></li></ul>
@@ -222,7 +265,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/11/%E8%8D%89%E7%A8%BF/" data-id="ck7t14o270003actvhu7kcga7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/11/%E8%8D%89%E7%A8%BF/" data-id="ck7t3nsv50001m8tvegbe2vq1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -322,12 +365,12 @@
 </tbody></table>
 <p>分类具有顺序性和层次性，也就是说 Foo, Bar 不等于 Bar, Foo；而标签没有顺序和层次。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">categories:</span><br><span class="line">- Diary</span><br><span class="line">tags:</span><br><span class="line">- PS3</span><br><span class="line">- Games</span><br></pre></td></tr></table></figure>
-<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>[ ] 源码上git<br>[ ] 安装主题<br>[ ] 研究一下常用的hexo指令<br>[ ] 研究一下常用的文件目录结构<br>[ ] 研究更新日志如何添加<br>[ ] 研究更新日志如何添加</p>
+<h2 id="TODO"><a href="#TODO" class="headerlink" title="TODO"></a>TODO</h2><p>[ ] 源码上git<br>[ ] 安装主题<br>[ ] 研究一下常用的hexo指令<br>[ ] 研究一下常用的文件目录结构<br>[ ] 研究更新日志如何添加<br>[ ] 研究更新日志如何添加<br>[ ] 123</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/11/hexo%E5%88%9D%E6%8E%A2/" data-id="ck7t14o1w0001actv3rz15vxf" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/11/hexo%E5%88%9D%E6%8E%A2/" data-id="ck7t3nsvc0004m8tv5o01h2u9" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/blog/" rel="tag">blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/" rel="tag">hexo</a></li></ul>
@@ -384,7 +427,11 @@
       <ul>
         
           <li>
-            <a href="/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/">git初探(二)-推送已有代码到远程仓库</a>
+            <a href="/2020/03/15/git-1/">git 1</a>
+          </li>
+        
+          <li>
+            <a href="/2020/03/12/git/git%202/">git初探(二)-推送已有代码到远程仓库</a>
           </li>
         
           <li>
