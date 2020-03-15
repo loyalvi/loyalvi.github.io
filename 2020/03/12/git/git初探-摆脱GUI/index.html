@@ -5,17 +5,17 @@
   
 
   
-  <title>git初探-摆脱GUI | Hexo</title>
+  <title>git初探(二)-推送已有代码到远程仓库 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="git初探-尝试摆脱GUI初始化仓库，推送已有代码到远程仓库（ssh） 1234567&#x2F;&#x2F;初始化git init&#x2F;&#x2F;git add .&#x2F;&#x2F;添加到 形成快照git commit -m &quot;init project&quot;git status  git push origin master 1234fatal: &#39;origin&#39; does not appear to be a git repositoryfa">
+  <meta name="description" content="推送已有项目代码到远程仓库。 1.初始化仓库1234567&#x2F;&#x2F;初始化git init&#x2F;&#x2F;git add .&#x2F;&#x2F;添加到 形成快照git commit -m &quot;init project&quot;git status  git push origin master 1234fatal: &#39;origin&#39; does not appear to be a git repositoryfatal: Could not">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git初探-摆脱GUI">
+<meta property="og:title" content="git初探(二)-推送已有代码到远程仓库">
 <meta property="og:url" content="http://yoursite.com/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="git初探-尝试摆脱GUI初始化仓库，推送已有代码到远程仓库（ssh） 1234567&#x2F;&#x2F;初始化git init&#x2F;&#x2F;git add .&#x2F;&#x2F;添加到 形成快照git commit -m &quot;init project&quot;git status  git push origin master 1234fatal: &#39;origin&#39; does not appear to be a git repositoryfa">
+<meta property="og:description" content="推送已有项目代码到远程仓库。 1.初始化仓库1234567&#x2F;&#x2F;初始化git init&#x2F;&#x2F;git add .&#x2F;&#x2F;添加到 形成快照git commit -m &quot;init project&quot;git status  git push origin master 1234fatal: &#39;origin&#39; does not appear to be a git repositoryfatal: Could not">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-03-12T06:18:00.000Z">
-<meta property="article:modified_time" content="2020-03-12T11:44:11.107Z">
+<meta property="article:modified_time" content="2020-03-15T12:40:23.284Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary">
@@ -81,7 +81,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      git初探-摆脱GUI
+      git初探(二)-推送已有代码到远程仓库
     </h1>
   
 
@@ -89,19 +89,20 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="git初探-尝试摆脱GUI"><a href="#git初探-尝试摆脱GUI" class="headerlink" title="git初探-尝试摆脱GUI"></a>git初探-尝试摆脱GUI</h2><p>初始化仓库，推送已有代码到远程仓库（ssh）</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//初始化</span><br><span class="line">git init</span><br><span class="line">//</span><br><span class="line">git add .</span><br><span class="line">//添加到 形成快照</span><br><span class="line">git commit -m <span class="string">"init project"</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
+        <p>推送已有项目代码到远程仓库。</p>
+<h3 id="1-初始化仓库"><a href="#1-初始化仓库" class="headerlink" title="1.初始化仓库"></a>1.初始化仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">//初始化</span><br><span class="line">git init</span><br><span class="line">//</span><br><span class="line">git add .</span><br><span class="line">//添加到 形成快照</span><br><span class="line">git commit -m <span class="string">"init project"</span></span><br><span class="line">git status</span><br></pre></td></tr></table></figure>
 
 <p><code>git push origin master</code></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fatal: <span class="string">'origin'</span> does not appear to be a git repository</span><br><span class="line">fatal: Could not <span class="built_in">read</span> from remote repository.</span><br><span class="line">Please make sure you have the correct access rights</span><br><span class="line">and the repository exists.</span><br></pre></td></tr></table></figure>
-<p>在github上创建项目并且拿到对应的空项目的https/ssh路径<br><a href="mailto:git@github.com">git@github.com</a>:loyalvi/hexo.git</p>
+<h3 id="2-创建项目"><a href="#2-创建项目" class="headerlink" title="2.创建项目"></a>2.创建项目</h3><p>在github（gitee/gitlab）上创建新项目，并且拿到对应的空项目的https（http）/ssh路径。  </p>
+<p>例如我创建了<code>git@github.com:loyalvi/hexo.git</code>这个项目。</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin git@github.com:loyalvi&#x2F;hexo.git</span><br><span class="line">git push origin master</span><br></pre></td></tr></table></figure>
 <p>成功提交</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Enumerating objects: 119, done.</span><br><span class="line">Counting objects: 100% (119&#x2F;119), done.</span><br><span class="line">Delta compression using up to 8 threads</span><br><span class="line">Compressing objects: 100% (110&#x2F;110), done.</span><br><span class="line">Writing objects: 100% (119&#x2F;119), 555.08 KiB | 2.19 MiB&#x2F;s, done.</span><br><span class="line">Total 119 (delta 0), reused 0 (delta 0)</span><br><span class="line">To github.com:loyalvi&#x2F;hexo.git</span><br><span class="line"> * [new branch]      master -&gt; master</span><br></pre></td></tr></table></figure>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/" data-id="ck7odcozu00014wtv238ddqfi" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/" data-id="ck7t14o350009actv8fxg4mbi" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/" rel="tag">git</a></li></ul>
@@ -166,7 +167,7 @@
       <ul>
         
           <li>
-            <a href="/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/">git初探-摆脱GUI</a>
+            <a href="/2020/03/12/git/git%E5%88%9D%E6%8E%A2-%E6%91%86%E8%84%B1GUI/">git初探(二)-推送已有代码到远程仓库</a>
           </li>
         
           <li>
@@ -179,10 +180,6 @@
         
           <li>
             <a href="/2020/03/11/hexo%E5%88%9D%E6%8E%A2/">hexo的简单使用</a>
-          </li>
-        
-          <li>
-            <a href="/2020/03/11/hello-world/">Hello World</a>
           </li>
         
       </ul>
